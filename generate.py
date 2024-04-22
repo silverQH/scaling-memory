@@ -5,7 +5,7 @@ import urllib.request
 import random
 
 site = 'https://www.sjjhr.com'
-sitemaps = ['/post-sitemap.xml','/page-sitemap.xml']
+sitemaps = ['/sitemap.xml','/sitemap.xml']
 
 result = []
 bingData = {}
@@ -35,13 +35,13 @@ for data in result:
         bingUrllist.append(data)
     # baidu google 提交前50条
     googleUrllist.append(data)
-    if i == 50:
+    if i == 5:
         break
 
 # bing 提交随机5条
 bingUrllist= bingUrllist + random.sample(result,5)
 # baidu google 提交随机50条
-googleUrllist=googleUrllist + random.sample(result,50)
+googleUrllist=googleUrllist + random.sample(result,5)
 
 with open('urls.txt', 'w') as file:
     for data in googleUrllist:
