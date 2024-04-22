@@ -4,7 +4,7 @@ import urllib
 import urllib.request
 import random
 
-site = 'https://blog.mhuig.top'
+site = 'https://www.sjjhr.com'
 sitemaps = ['/post-sitemap.xml','/page-sitemap.xml']
 
 result = []
